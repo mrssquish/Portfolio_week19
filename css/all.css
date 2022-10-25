@@ -259,10 +259,6 @@ footer{
     -moz-background-clip: text;
     -webkit-background-clip: text;*/
 }
-.button3{
-    border: solid 2px black;
-    padding: 10px 30px 10px 30px;
-}
 #footerBottom{
     width:100%;
     height:130px;
@@ -497,9 +493,6 @@ footer{
     .footerTitle{
         font-size: 42px;
         padding-bottom: 10px;
-    }
-    #footerTop p{
-        padding-bottom: 15px;
     }
     .footerNav li{
         display: block;
