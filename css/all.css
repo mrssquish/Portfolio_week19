@@ -89,8 +89,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    position: absolute;
     position: sticky ;
-    z-index: 1000;
+    z-index: 10000;
 
 }
 nav a{
@@ -196,10 +197,10 @@ nav ul li a:hover{
      "top"
     "bottom";
     filter: drop-shadow(5px 5px 5px #999) grayscale(95%);
+    z-index: -1;
   
 }
 .card:hover{
-
     filter: grayscale(0%); 
     transform: scale(1.05);
     filter: drop-shadow(5px 5px 15px #999) saturate(1.05);
@@ -286,7 +287,7 @@ footer{
 /* ABOUT PAGE----------------------------------------------------------*/
 .main_container-about{
     display: grid;
-    grid-template-rows: 50vh 100vh 60vh 382px;
+    grid-template-rows: 60vh 105vh 60vh 382px;
     grid-template-areas: 
     "hero"
     "main"
@@ -295,86 +296,82 @@ footer{
 }
 .hero_about{
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 100px 60vh;
     grid-template-columns: repeat(12, 1fr);
 }
 .hero_about{
     grid-area: hero;
     background-color: #333;
+   
 }
 .hero_title{
     grid-row: 1/2;
     grid-column: 3/8;
 }
-.neon{
+.hero_title a{
+    margin-left:15px;
+}
+.neonTitle{
     color:hotpink;
     font-size:97px;
-   
- z-index: 1;
-   font-weight:400;
-    animation: flicker 1.5s infinite;
-}
-
-    /* Animate neon flicker */
-    @keyframes flicker {
-        
-        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-          
-            text-shadow:
+    margin-top:125px;
+    font-weight:400;
+    text-shadow:
                 -2px -2px 1rem #000,
                 2px 2px 4px #333,
                 0 0 8px rgba(255,105,180,1),
                 0 0 16px rgba(255,105,180,.7),
                 0 0 32px rgba(255,105,180,.2),
                 0 0 64px rgba(255,105,180,.4),
-                0 0 70px rgba(255,105,180,.8);   
-        }
+                0 0 70px rgba(255,105,180,.8); 
+}
+.neon{
+    color:lightpink;
+    animation: flicker 1.5s infinite;
+    border:solid 2px hotpink;
+    font-weight: 600;
+
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         
-        20%, 24%, 55% {        
-            text-shadow: none;
-            box-shadow: none;
-        }    
+        text-shadow:
+            -2px -2px 1rem #000,
+            2px 2px 4px #333,
+            0 0 8px rgba(255,105,180,1),
+            0 0 16px rgba(255,105,180,.7),
+            0 0 32px rgba(255,105,180,.2),
+            0 0 64px rgba(255,105,180,.4),
+            0 0 70px rgba(255,105,180,.8);  
+        box-shadow:
+            -2px -2px 1rem #000,
+            2px 2px 4px #333,
+            0 0 8px rgba(255,105,180,1),
+            0 0 16px rgba(255,105,180,.7),
+            0 0 32px rgba(255,105,180,.2),
+            0 0 64px rgba(255,105,180,.4),
+            0 0 70px rgba(255,105,180,.8);  
+            
+            
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
 .about_main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 220px 115px 100px 80px 25px 600px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #aboutHeroImg{
     grid-column: 7/11;
     grid-row: 2/3;
+    margin-top:100px;
     width:586px;
     justify-items: left;
 }
@@ -425,6 +422,10 @@ b{
 }
 #uxSkills{
     grid-area: ux;
+}
+#uxSkills h3, #graphicSkills h3{
+    font-size: 18px;font-weight: 700;
+    margin-bottom: -10px;
 }
 #graphicSkills{
     grid-area: graphic;
