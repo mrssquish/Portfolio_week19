@@ -28,7 +28,7 @@ body{
     border: 2px solid hotpink;
     color:hotpink;
     transition: 1.5s;
-    filter:drop-shadow(5px 5px 20px rgba(255, 0, 255, .5));
+    filter:drop-shadow(5px 5px 20px rgba(255,105,180,.5));
 }
 
 .button2{
@@ -99,16 +99,20 @@ nav a{
 }
 
 nav ul li a:hover{
-    color:magenta;
+    color:lightpink;
+    text-shadow: 2px 2px 15px rgba(255,105,180,1);
 }
 
 .logo{
     width:65px;
 
 }
+.logo:hover{
+    filter:drop-shadow(2px 2px 15px rgba(255,105,180,1));
+}
 .main_container{
     display: grid;
-    grid-template-rows: 100px 100vh 60vh 165vh 382px;
+    grid-template-rows: 100px 100vh 60vh 165vh 400px;
     grid-template-areas: 
         "nav"
         "hero"
@@ -118,6 +122,7 @@ nav ul li a:hover{
    
 }
 .hero{
+    margin-top:-40px;
     grid-area: hero;
     display: flex;
     background-color: #333;
@@ -197,14 +202,14 @@ nav ul li a:hover{
      "top"
     "bottom";
     filter: drop-shadow(5px 5px 5px #999) grayscale(95%);
-    z-index: -1;
+    
   
 }
 .card:hover{
     filter: grayscale(0%); 
     transform: scale(1.05);
     filter: drop-shadow(5px 5px 15px #999) saturate(1.05);
-
+    
 }
 
 .card1{
@@ -240,7 +245,7 @@ nav ul li a:hover{
 footer{
     grid-area: footer;
     display: grid;
-    grid-template-rows: .5fr 1fr;
+    grid-template-rows: .6fr 1fr;
     justify-items: center;
 }
 #footerTop{
@@ -287,7 +292,7 @@ footer{
 /* ABOUT PAGE----------------------------------------------------------*/
 .main_container-about{
     display: grid;
-    grid-template-rows: 60vh 105vh 60vh 382px;
+    grid-template-rows: 60vh 105vh 60vh 450px;
     grid-template-areas: 
     "hero"
     "main"
@@ -311,11 +316,13 @@ footer{
 .hero_title a{
     margin-left:15px;
 }
-.neonTitle{
-    color:hotpink;
+.hero_title h1{
     font-size:97px;
     margin-top:125px;
     font-weight:400;
+}
+.neonTitle{
+    color:lightpink;
     text-shadow:
                 -2px -2px 1rem #000,
                 2px 2px 4px #333,
@@ -330,8 +337,9 @@ footer{
     animation: flicker 1.5s infinite;
     border:solid 2px hotpink;
     font-weight: 600;
-
+    animation: flicker 1.5s infinite;
 }
+
 
 /* Animate neon flicker */
 @keyframes flicker {
@@ -354,6 +362,31 @@ footer{
             0 0 32px rgba(255,105,180,.2),
             0 0 64px rgba(255,105,180,.4),
             0 0 70px rgba(255,105,180,.8);  
+            
+            
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+.neonP{
+    color:lightpink;
+    animation: flickers 1.5s infinite;
+}
+@keyframes flickers {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        
+        text-shadow:
+            -2px -2px 1rem #000,
+            2px 2px 4px #333,
+            0 0 8px rgba(255,105,180,1),
+            0 0 16px rgba(255,105,180,.7),
+            0 0 32px rgba(255,105,180,.2),
+            0 0 64px rgba(255,105,180,.4),
+            0 0 70px rgba(255,105,180,.8);    
             
             
     }
