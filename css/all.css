@@ -112,14 +112,13 @@ nav ul li a:hover{
 }
 .main_container{
     display: grid;
-    grid-template-rows: 100px 100vh 60vh 165vh 400px;
+    grid-template-rows: 100px 100vh 60vh 165vh 450px;
     grid-template-areas: 
         "nav"
         "hero"
         "about"
         "feature"
-        "footer";
-   
+        "footer"
 }
 .hero{
     margin-top:-40px;
@@ -154,7 +153,6 @@ nav ul li a:hover{
     justify-self: center;
     justify-content: center;
     align-items: center;
-  
     padding-bottom:50px;
 }
 .about_content{
@@ -245,11 +243,12 @@ nav ul li a:hover{
 footer{
     grid-area: footer;
     display: grid;
-    grid-template-rows: .6fr 1fr;
+    grid-template-rows: 1fr .5fr;
     justify-items: center;
 }
 #footerTop{
     width: 100%;
+    height:350px;
     padding:50px;
     text-align: center;
     background-color:#333 ;
@@ -259,7 +258,7 @@ footer{
     background-size: cover;*/
 
 .footerTitle{ 
-    margin:0 auto;margin-bottom: -30px;
+    margin-top:20px; auto;margin-bottom: -30px;
 
     /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: cover;
@@ -319,7 +318,8 @@ footer{
 .hero_title h1{
     font-size:97px;
     margin-top:125px;
-    font-weight:400;
+    font-weight:600;
+    color:white;
 }
 .neonTitle{
     color:lightpink;
@@ -360,8 +360,8 @@ footer{
             0 0 8px rgba(255,105,180,1),
             0 0 16px rgba(255,105,180,.7),
             0 0 32px rgba(255,105,180,.2),
-            0 0 64px rgba(255,105,180,.4),
-            0 0 70px rgba(255,105,180,.8);  
+            0 0 48px rgba(255,105,180,.4),
+            0 0 50px rgba(255,105,180,.8);  
             
             
     }
@@ -372,7 +372,7 @@ footer{
     }    
 }
 .neonP{
-    color:lightpink;
+    color: lightpink !important;
     animation: flickers 1.5s infinite;
 }
 @keyframes flickers {
@@ -386,9 +386,7 @@ footer{
             0 0 16px rgba(255,105,180,.7),
             0 0 32px rgba(255,105,180,.2),
             0 0 64px rgba(255,105,180,.4),
-            0 0 70px rgba(255,105,180,.8);    
-            
-            
+            0 0 70px rgba(255,105,180,.8);       
     }
     
     20%, 24%, 55% {        
